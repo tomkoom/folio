@@ -26,12 +26,12 @@ body {
 .Grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    grid-gap: 1rem;
+    grid-gap: 1.5rem;
 }
 
 .GridItem {
     /* background-color: aquamarine; */
-    padding-bottom: 50%;
+    padding-bottom: 66%;
     /* box-shadow: inset 0 0 0 1px #CBD5E0; */
     position: relative;
     background-color: #fff;
@@ -59,3 +59,5 @@ body {
 h3 {
     font-weight: 500;
 }
+
+
