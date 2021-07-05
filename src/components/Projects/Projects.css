@@ -10,10 +10,8 @@
 
 .ProjectItem {
     width: 100%;
-    /* background-color: aliceblue; */
     box-shadow: 0px 0px 0px 1px #CBD5E0;
     padding: 20px;
-    /* line-height: 200%; */
 }
 
 .ProjectItem a {
