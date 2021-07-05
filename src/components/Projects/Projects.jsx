@@ -3,7 +3,7 @@ import './Projects.css'
 import Tilt from 'react-parallax-tilt'
 
 const Projects = ({ data }) => {
-    const space = {}
+    const forsedSpace = String.fromCharCode(160);
 
     return (
         <div className="ProjectsContainer">
@@ -28,7 +28,7 @@ const Projects = ({ data }) => {
                                 <div className="divider8"></div>
                                 <p>{card.category}</p>
                                 <div className="divider8"></div>
-                                <p>{card.tags}</p>
+                                <p>{card.tags === "" ? forsedSpace : card.tags}</p>
 
                                 {/* <span class="LinkBlock"></span> */}
                             </a>
