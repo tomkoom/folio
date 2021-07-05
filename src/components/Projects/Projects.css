@@ -6,14 +6,17 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
     grid-gap: 24px;
+    grid-auto-flow: column;
 }
 
 .ProjectItem {
-    width: 100%;
     box-shadow: 0px 0px 0px 1px #CBD5E0;
     padding: 20px;
+    border-radius: 4px;
+    height: 100%;
 }
 
-.ProjectItem a {
+
+.SpanColor {
     color: #718096;
 }

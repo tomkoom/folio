@@ -16,5 +16,11 @@ export const data = [
         link: 'www.codewars.com/users/tomkoom',
         category: 'Education',
         tags: 'js'
+    },
+    {
+        name: 'CV',
+        link: 'career.habr.com/tomkoom',
+        category: 'CV',
+        tags: ''
     }
 ]
