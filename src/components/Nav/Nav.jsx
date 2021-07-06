@@ -16,6 +16,17 @@ const Nav = () => {
                 </div>
 
                 <ul className='NavLinks'>
+
+                    <li>
+                        <a
+                            className="NavLink"
+                            href='https://www.linkedin.com/in/tomash-sugint/'
+                            target='_blank'
+                            rel="noopener noreferrer">
+                            <FontAwesomeIcon icon={faLinkedin} size='lg' color="#718096" />
+                        </a>
+                    </li>
+
                     <li>
                         <a
                             className="NavLink"

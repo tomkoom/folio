@@ -1,15 +1,17 @@
 import React from 'react'
 import './Projects.css'
 import Tilt from 'react-parallax-tilt'
+import { Timeline } from 'react-twitter-widgets'
 
 const Projects = ({ data }) => {
     const forsedSpace = String.fromCharCode(160);
 
     return (
         <div className="ProjectsContainer">
-            {/* <div className="divider32"></div> */}
-            <div className="ProjectsGrid">
 
+            {/* <div className="divider32"></div> */}
+
+            <div className="ProjectsGrid">
                 {data.map((card, index) => (
                     <Tilt scale={0.99} tiltReverse={true} tiltMaxAngleX={3} tiltMaxAngleY={3}>
                         <div className="ProjectItem" key={index}>
@@ -30,12 +32,17 @@ const Projects = ({ data }) => {
                                 <div className="divider8"></div>
                                 <p>{card.tags === "" ? forsedSpace : card.tags}</p>
 
-                                {/* <span class="LinkBlock"></span> */}
                             </a>
                         </div>
                     </Tilt>
                 ))}
+            </div>
 
+            <div className="TwitterWidget">
+                <Timeline
+                    dataSource={{ sourceType: "profile", screenName: "_tomkoom" }}
+                    options={{ width: "400", height: "600" }}
+                />
             </div>
 
         </div >
