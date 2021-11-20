@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Nav from './components/Nav/Nav';
-import Projects from './components/Nav/Projects/Projects';
+import Nav from './Components/Nav/Nav';
+import Projects from './Components/Projects/Projects';
 import { data } from './data/data';
 
 function App() {
