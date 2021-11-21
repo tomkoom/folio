@@ -1,5 +1,11 @@
 export const data = [
     {
+        name: 'icApps',
+        link: 'icapps.xyz',
+        category: 'Personal project',
+        tags: 'React.js'
+    },
+    {
         name: 'IndieLogo',
         link: 'indielogo.co',
         category: 'Personal project',
