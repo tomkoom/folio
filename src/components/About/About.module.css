@@ -1,9 +1,15 @@
+/* ABOUT */
+
 .about {
 	margin: 12px 0 32px 0;
 }
 
+.about h2 {
+	color: var(--cyanA400);
+}
+
 .intro {
-    margin-top: 8px;
+	margin-top: 8px;
 	font-size: var(--fontSize5);
-    color: var(--blueGray100);
+	color: var(--blueGray100);
 }

@@ -1,55 +1,77 @@
 import React from "react";
-import "./Nav.css";
+import css from "./Nav.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faTwitter,
 	faGithub,
 	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "framer-motion";
 
 const Nav = () => {
 	return (
 		<div>
-			<div className="nav">
-				<div className="nav__logo">
+			<div className={css.nav}>
+				<div className={css.nav__logo}>
 					<a href="/" rel="home">
-						<h1 className="nav__logo__title">tomkoom</h1>
+						<h1 className={css.nav__logo__title}>tomkoom</h1>
 					</a>
 				</div>
 
-				<ul className="NavLinks">
-					<li>
+				<ul className={css.nav__list}>
+					<motion.li
+						className={css.nav__list__item}
+						whileHover={{ y: "-6px" }}
+						transition={{
+							type: "spring",
+							bounce: 0.66,
+						}}
+					>
 						<a
-							className="NavLink"
-							href="https://www.linkedin.com/in/tomash-sugint/"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FontAwesomeIcon icon={faLinkedin} size="lg" />
-						</a>
-					</li>
-
-					<li>
-						<a
-							className="NavLink"
+							className={css.nav__list__item__link}
 							href="https://twitter.com/_tomkoom"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<FontAwesomeIcon icon={faTwitter} size="lg" />
 						</a>
-					</li>
+					</motion.li>
 
-					<li>
+					<motion.li
+						className={css.nav__list__item}
+						whileHover={{ y: "-6px" }}
+						transition={{
+							type: "spring",
+							bounce: 0.66,
+						}}
+					>
 						<a
-							className="NavLink"
+							className={css.nav__list__item__link}
 							href="https://github.com/tomkoom"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
 							<FontAwesomeIcon icon={faGithub} size="lg" />
 						</a>
-					</li>
+					</motion.li>
+
+					<motion.li
+						className={css.nav__list__item}
+						whileHover={{ y: "-6px" }}
+						transition={{
+							type: "spring",
+							bounce: 0.66,
+						}}
+					>
+						<a
+							className={css.nav__list__item__link}
+							href="https://www.linkedin.com/in/tomash-sugint/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<FontAwesomeIcon icon={faLinkedin} size="lg" />
+						</a>
+					</motion.li>
 				</ul>
 			</div>
 		</div>

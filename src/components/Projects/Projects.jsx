@@ -8,33 +8,45 @@ const externalLinkIcon = <FontAwesomeIcon icon={faExternalLinkAlt} />;
 const projects = [
 	{
 		name: "icApps",
-		link: "icapps.xyz",
-		category: "Personal project",
-		tags: "React.js",
+		description:
+			"icApps is an application directory for Internet Computer blockchain project.",
+		liveLink: "https://icapps.xyz/",
+		githubLink: "https://github.com/tomkoom/icApps",
+		category: ["Personal project"],
+		tags: ["React", "Google Sheets API", "framer-motion"],
 	},
 	{
 		name: "IndieLogo",
-		link: "indielogo.co",
-		category: "Personal project",
-		tags: "React.js, Redux",
+		description:
+			"A simple logo creation app built with React and Stripe.js",
+		liveLink: "https://indielogo.co/",
+		githubLink: "",
+		category: ["Personal project"],
+		tags: ["React", "Stripe.js"],
 	},
 	{
 		name: "React Social Network",
-		link: "reactsocnet.netlify.app",
-		category: "Education",
-		tags: "React.js, Redux",
+		description: "Lorem ipsum",
+		liveLink: "https://reactsocnet.netlify.app/",
+		githubLink: "",
+		category: ["Education"],
+		tags: ["React.js", "Redux"],
 	},
 	{
 		name: "Codewars",
-		link: "www.codewars.com/users/tomkoom",
-		category: "Education",
-		tags: "js",
+		description: "Lorem ipsum",
+		liveLink: "https://www.codewars.com/users/tomkoom/",
+		githubLink: "",
+		category: ["Education"],
+		tags: ["JS"],
 	},
 	{
 		name: "CV",
-		link: "career.habr.com/tomkoom",
-		category: "CV",
-		tags: "",
+		description: "Lorem ipsum",
+		liveLink: "https://career.habr.com/tomkoom",
+		githubLink: "",
+		category: ["CV"],
+		tags: [],
 	},
 ];
 
@@ -44,32 +56,46 @@ const Projects = () => {
 			<h3>Projects</h3>
 			<div className={css.projects__grid}>
 				{/* LIST */}
-				{projects.map((card, i) => (
+				{projects.map((p, i) => (
 					<div className={css.projects__grid__item} key={i}>
-						<a
-							href={`http://${card.link}`}
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<h3 className={css.projects__grid__item__title}>
-								{card.name}
-							</h3>
-							<h4>
-								<span className={css.spanColor}>
-									{card.link}
+						<h3 className={css.projects__grid__item__title}>
+							{p.name}
+						</h3>
+						<p className="text blueGray200">{p.description}</p>
+
+						<div className={css.projects__grid__item__tags}>
+							{p.tags.map((tag, i) => (
+								<span
+									className={
+										css.projects__grid__item__tags__item
+									}
+									key={i}
+								>
+									{tag}
 								</span>
-							</h4>
-							<p>{card.category}</p>
-							<p>{card.tags}</p>
-						</a>
+							))}
+						</div>
+
 						<div className={css.projects__grid__item__links}>
 							<a
-								href="#"
+								href={p.liveLink ? p.liveLink : null}
 								className={
 									css.projects__grid__item__links__item
 								}
+								style={p.liveLink ? null : { display: "none" }}
 							>
 								Live {externalLinkIcon}
+							</a>
+							<a
+								href={p.githubLink ? p.githubLink : null}
+								className={
+									css.projects__grid__item__links__item
+								}
+								style={
+									p.githubLink ? null : { display: "none" }
+								}
+							>
+								GitHub {externalLinkIcon}
 							</a>
 						</div>
 					</div>

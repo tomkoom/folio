@@ -5,7 +5,10 @@ const About = () => {
 	return (
 		<section className={css.about}>
 			<h2>Hi! I'm Tomash</h2>
-			<p className={css.intro}>I'm a Frontend Developer from Belarus.</p>
+			<p className={css.intro}>
+				I'm a <span className="cyanA400">Frontend Developer</span> from
+				Belarus.
+			</p>
 		</section>
 	);
 };

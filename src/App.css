@@ -30,6 +30,11 @@
 	--blueGray100: #cfd8dc;
 	--blueGray50: #eceff1;
 
+	--cyanA200: #18ffff;
+	--cyanA400: #00e5ff;
+
+	--deepOrangeA400: #ff3d00;
+
 	/* FONT SIZE */
 	--fontSize1: 3.052rem;
 	--fontSize2: 2.441rem;
@@ -62,6 +67,11 @@ body {
 	background-color: var(--blueGray900);
 }
 
+.App {
+	max-width: 1024px;
+	margin: 24px auto;
+}
+
 a {
 	text-decoration: none;
 	color: white;
@@ -71,13 +81,6 @@ code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 		monospace;
 }
-
-.App {
-	max-width: 1024px;
-	margin: 0 auto;
-	padding: 0 24px;
-}
-
 
 /* TYPOGRAPHY */
 
@@ -91,4 +94,14 @@ h3 {
 
 .text {
 	font-size: var(--fontSize5);
+	line-height: 150%;
+}
+
+/* --- */
+.blueGray200 {
+	color: var(--blueGray200);
+}
+
+.cyanA400 {
+	color: var(--cyanA400);
 }
