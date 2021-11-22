@@ -1,1 +1,0 @@
-[tomkoom.netlify.app](https://tomkoom.netlify.app/)
