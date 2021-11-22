@@ -9,7 +9,7 @@ const projects = [
 	{
 		name: "icApps",
 		description:
-			"icApps is an application directory for Internet Computer blockchain project.",
+			"icApps is an application directory for the Internet Computer blockchain project.",
 		liveLink: "https://icapps.xyz/",
 		githubLink: "https://github.com/tomkoom/icApps",
 		category: ["Personal project"],
