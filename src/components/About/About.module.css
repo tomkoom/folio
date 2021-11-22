@@ -1,0 +1,9 @@
+.about {
+	margin: 12px 0 32px 0;
+}
+
+.intro {
+    margin-top: 8px;
+	font-size: var(--fontSize5);
+    color: var(--blueGray100);
+}

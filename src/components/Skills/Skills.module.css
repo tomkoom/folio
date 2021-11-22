@@ -1,0 +1,16 @@
+.skills {
+	margin-bottom: 32px;
+}
+
+.skills__container {
+	display: flex;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.skills__container__tag {
+	display: inline-block;
+	padding: 8px 12px;
+	background-color: var(--blueGray800);
+	border-radius: 8px;
+}

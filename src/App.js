@@ -1,14 +1,17 @@
 import React from 'react';
 import './App.css';
+import About from './Components/About/About';
 import Nav from './Components/Nav/Nav';
 import Projects from './Components/Projects/Projects';
-import { data } from './data/data';
+import Skills from './Components/Skills/Skills';
 
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Projects data={data} />
+      <About />
+      <Skills />
+      <Projects />
     </div>
   );
 }

@@ -1,25 +1,22 @@
-.projects {
-	display: flex;
-	margin: 32px;
-	gap: 24px;
-	max-width: 1200px;
-	margin: auto;
-}
-
 .projects__grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(368px, 1fr));
 	grid-gap: 24px;
 	width: 100%;
+	margin-top: 12px;
 	max-height: 0;
 }
 
 .projects__grid__item {
-	box-shadow: 0px 0px 0px 1px #cbd5e0;
 	padding: 20px;
-	border-radius: 4px;
+	border-radius: 8px;
+	background-color: var(--blueGray800);
 }
 
-.span-color {
-	color: #718096;
+.projects__grid__item__title {
+	font-size: var(--fontSize4);
+}
+
+.spanColor {
+	color: var(--blueGray400);
 }
