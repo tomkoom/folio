@@ -6,7 +6,6 @@ import {
 	faGithub,
 	faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
 
 const Nav = () => {
 	return (
@@ -19,59 +18,38 @@ const Nav = () => {
 				</div>
 
 				<ul className={css.nav__list}>
-					<motion.li
-						className={css.nav__list__item}
-						whileHover={{ y: "-6px" }}
-						transition={{
-							type: "spring",
-							bounce: 0.66,
-						}}
-					>
-						<a
-							className={css.nav__list__item__link}
-							href="https://twitter.com/_tomkoom"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<FontAwesomeIcon icon={faTwitter} size="lg" />
-						</a>
-					</motion.li>
-
-					<motion.li
-						className={css.nav__list__item}
-						whileHover={{ y: "-6px" }}
-						transition={{
-							type: "spring",
-							bounce: 0.66,
-						}}
-					>
+					<li className={css.nav__list__item}>
 						<a
 							className={css.nav__list__item__link}
 							href="https://github.com/tomkoom"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FontAwesomeIcon icon={faGithub} size="lg" />
+							<FontAwesomeIcon icon={faGithub} />
 						</a>
-					</motion.li>
+					</li>
 
-					<motion.li
-						className={css.nav__list__item}
-						whileHover={{ y: "-6px" }}
-						transition={{
-							type: "spring",
-							bounce: 0.66,
-						}}
-					>
+					<li className={css.nav__list__item}>
+						<a
+							className={css.nav__list__item__link}
+							href="https://twitter.com/_tomkoom"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							<FontAwesomeIcon icon={faTwitter} />
+						</a>
+					</li>
+
+					<li className={css.nav__list__item}>
 						<a
 							className={css.nav__list__item__link}
 							href="https://www.linkedin.com/in/tomash-sugint/"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
-							<FontAwesomeIcon icon={faLinkedin} size="lg" />
+							<FontAwesomeIcon icon={faLinkedin} />
 						</a>
-					</motion.li>
+					</li>
 				</ul>
 			</div>
 		</div>

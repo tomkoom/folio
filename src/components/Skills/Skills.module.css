@@ -1,9 +1,8 @@
-.skills {
-	margin-bottom: 32px;
-}
+/* SKILLS */
 
 .skills__container {
 	display: flex;
+	flex-wrap: wrap;
 	gap: 8px;
 	margin-top: 12px;
 }
@@ -11,6 +10,6 @@
 .skills__container__tag {
 	display: inline-block;
 	padding: 8px 12px;
-	background-color: var(--blueGray800);
-	border-radius: 8px;
+	background-color: var(--blueGray50);
+	border-radius: 4px;
 }

@@ -12,7 +12,7 @@ const projects = [
 			"icApps is an application directory for the Internet Computer blockchain project.",
 		liveLink: "https://icapps.xyz/",
 		githubLink: "https://github.com/tomkoom/icApps",
-		category: ["Personal project"],
+		category: "Personal project",
 		tags: ["React", "Google Sheets API", "framer-motion"],
 	},
 	{
@@ -21,15 +21,24 @@ const projects = [
 			"A simple logo creation app built with React and Stripe.js",
 		liveLink: "https://indielogo.co/",
 		githubLink: "",
-		category: ["Personal project"],
+		category: "Personal project",
 		tags: ["React", "Stripe.js"],
+	},
+	{
+		name: "React Nav Components",
+		description:
+			"A simple logo creation app built with React and Stripe.js",
+		liveLink: "https://react-responsive-nav2.netlify.app/",
+		githubLink: "https://github.com/tomkoom/react-responsive-nav2",
+		category: "Components",
+		tags: ["React", "framer-motion"],
 	},
 	{
 		name: "React Social Network",
 		description: "Lorem ipsum",
 		liveLink: "https://reactsocnet.netlify.app/",
 		githubLink: "",
-		category: ["Education"],
+		category: "Education",
 		tags: ["React.js", "Redux"],
 	},
 	{
@@ -37,7 +46,7 @@ const projects = [
 		description: "Lorem ipsum",
 		liveLink: "https://www.codewars.com/users/tomkoom/",
 		githubLink: "",
-		category: ["Education"],
+		category: "Education",
 		tags: ["JS"],
 	},
 	{
@@ -45,7 +54,7 @@ const projects = [
 		description: "Lorem ipsum",
 		liveLink: "https://career.habr.com/tomkoom",
 		githubLink: "",
-		category: ["CV"],
+		category: "CV",
 		tags: [],
 	},
 ];
@@ -58,10 +67,35 @@ const Projects = () => {
 				{/* LIST */}
 				{projects.map((p, i) => (
 					<div className={css.projects__grid__item} key={i}>
-						<h3 className={css.projects__grid__item__title}>
-							{p.name}
-						</h3>
-						<p className="text blueGray200">{p.description}</p>
+						<div className={css.projects__grid__item__caption}>
+							<h3
+								className={
+									css.projects__grid__item__caption__title
+								}
+							>
+								{p.name}
+							</h3>
+							<div
+								className={
+									css.projects__grid__item__caption__category
+								}
+								style={
+									p.category === "Personal project"
+										? { backgroundColor: "#651fff" }
+										: p.category === "Education"
+										? { backgroundColor: "#00796b" }
+										: p.category === "Components"
+										? { backgroundColor: "#2979ff" }
+										: null
+								}
+							>
+								{p.category}
+							</div>
+						</div>
+
+						<p className={css.projects__grid__item__description}>
+							{p.description}
+						</p>
 
 						<div className={css.projects__grid__item__tags}>
 							{p.tags.map((tag, i) => (
@@ -83,6 +117,8 @@ const Projects = () => {
 									css.projects__grid__item__links__item
 								}
 								style={p.liveLink ? null : { display: "none" }}
+								target="_blank"
+								rel="norefferer noopener"
 							>
 								Live {externalLinkIcon}
 							</a>
@@ -94,6 +130,8 @@ const Projects = () => {
 								style={
 									p.githubLink ? null : { display: "none" }
 								}
+								target="_blank"
+								rel="norefferer noopener"
 							>
 								GitHub {externalLinkIcon}
 							</a>
