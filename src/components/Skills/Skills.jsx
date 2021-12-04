@@ -1,15 +1,7 @@
 import React from "react";
 import css from "./Skills.module.css";
 
-const skills = [
-	"React.js",
-	"JS",
-	"HTML",
-	"CSS",
-	"GIT",
-	"APIs",
-	"Framer Motion",
-];
+const skills = ["React.js", "JS", "HTML", "CSS", "GIT", "APIs", "framer-motion"];
 
 const Skills = () => {
 	return (

@@ -1,11 +1,7 @@
 import React from "react";
 import css from "./Nav.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-	faTwitter,
-	faGithub,
-	faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Nav = () => {
 	return (
@@ -40,7 +36,7 @@ const Nav = () => {
 						</a>
 					</li>
 
-					<li className={css.nav__list__item}>
+					{/* <li className={css.nav__list__item}>
 						<a
 							className={css.nav__list__item__link}
 							href="https://www.linkedin.com/in/tomash-sugint/"
@@ -49,7 +45,7 @@ const Nav = () => {
 						>
 							<FontAwesomeIcon icon={faLinkedin} />
 						</a>
-					</li>
+					</li> */}
 				</ul>
 			</div>
 		</div>

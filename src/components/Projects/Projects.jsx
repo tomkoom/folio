@@ -17,8 +17,7 @@ const projects = [
 	},
 	{
 		name: "IndieLogo",
-		description:
-			"A simple logo creation app built with React and Stripe.js",
+		description: "A simple logo creation app built with React and Stripe.js",
 		liveLink: "https://indielogo.co/",
 		githubLink: "",
 		category: "Personal project",
@@ -26,37 +25,36 @@ const projects = [
 	},
 	{
 		name: "React Nav Components",
-		description:
-			"A simple logo creation app built with React and Stripe.js",
-		liveLink: "https://react-responsive-nav2.netlify.app/",
-		githubLink: "https://github.com/tomkoom/react-responsive-nav2",
+		description: "A simple logo creation app built with React and Stripe.js",
+		liveLink: "https://react-nav-components.netlify.app/",
+		githubLink: "https://github.com/tomkoom/react-nav-components",
 		category: "Components",
 		tags: ["React", "framer-motion"],
 	},
-	{
-		name: "React Social Network",
-		description: "Lorem ipsum",
-		liveLink: "https://reactsocnet.netlify.app/",
-		githubLink: "",
-		category: "Education",
-		tags: ["React.js", "Redux"],
-	},
-	{
-		name: "Codewars",
-		description: "Lorem ipsum",
-		liveLink: "https://www.codewars.com/users/tomkoom/",
-		githubLink: "",
-		category: "Education",
-		tags: ["JS"],
-	},
-	{
-		name: "CV",
-		description: "Lorem ipsum",
-		liveLink: "https://career.habr.com/tomkoom",
-		githubLink: "",
-		category: "CV",
-		tags: [],
-	},
+	// {
+	// 	name: "React Social Network",
+	// 	description: "Lorem ipsum",
+	// 	liveLink: "https://reactsocnet.netlify.app/",
+	// 	githubLink: "",
+	// 	category: "Education",
+	// 	tags: ["React.js", "Redux"],
+	// },
+	// {
+	// 	name: "Codewars",
+	// 	description: "Lorem ipsum",
+	// 	liveLink: "https://www.codewars.com/users/tomkoom/",
+	// 	githubLink: "",
+	// 	category: "Education",
+	// 	tags: ["JS"],
+	// },
+	// {
+	// 	name: "CV",
+	// 	description: "Lorem ipsum",
+	// 	liveLink: "https://career.habr.com/tomkoom",
+	// 	githubLink: "",
+	// 	category: "CV",
+	// 	tags: [],
+	// },
 ];
 
 const Projects = () => {
@@ -68,17 +66,9 @@ const Projects = () => {
 				{projects.map((p, i) => (
 					<div className={css.projects__grid__item} key={i}>
 						<div className={css.projects__grid__item__caption}>
-							<h3
-								className={
-									css.projects__grid__item__caption__title
-								}
-							>
-								{p.name}
-							</h3>
+							<h3 className={css.projects__grid__item__caption__title}>{p.name}</h3>
 							<div
-								className={
-									css.projects__grid__item__caption__category
-								}
+								className={css.projects__grid__item__caption__category}
 								style={
 									p.category === "Personal project"
 										? { backgroundColor: "#651fff" }
@@ -93,18 +83,11 @@ const Projects = () => {
 							</div>
 						</div>
 
-						<p className={css.projects__grid__item__description}>
-							{p.description}
-						</p>
+						<p className={css.projects__grid__item__description}>{p.description}</p>
 
 						<div className={css.projects__grid__item__tags}>
 							{p.tags.map((tag, i) => (
-								<span
-									className={
-										css.projects__grid__item__tags__item
-									}
-									key={i}
-								>
+								<span className={css.projects__grid__item__tags__item} key={i}>
 									{tag}
 								</span>
 							))}
@@ -113,9 +96,7 @@ const Projects = () => {
 						<div className={css.projects__grid__item__links}>
 							<a
 								href={p.liveLink ? p.liveLink : null}
-								className={
-									css.projects__grid__item__links__item
-								}
+								className={css.projects__grid__item__links__item}
 								style={p.liveLink ? null : { display: "none" }}
 								target="_blank"
 								rel="norefferer noopener"
@@ -124,12 +105,8 @@ const Projects = () => {
 							</a>
 							<a
 								href={p.githubLink ? p.githubLink : null}
-								className={
-									css.projects__grid__item__links__item
-								}
-								style={
-									p.githubLink ? null : { display: "none" }
-								}
+								className={css.projects__grid__item__links__item}
+								style={p.githubLink ? null : { display: "none" }}
 								target="_blank"
 								rel="norefferer noopener"
 							>

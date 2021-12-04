@@ -60,10 +60,15 @@
 }
 
 .projects__grid__item__links__item {
+	padding: 6px 8px;
+	box-shadow: 0 0 0 1px var(--blueGray100);
+	border-radius: 4px;
 	color: var(--blueGray700);
 }
 
 .projects__grid__item__links__item:hover {
 	color: var(--blueGray900);
-	box-shadow: 0 2px 0 var(--blueGray900);
+	box-shadow: 0 0 0 1px var(--blueGray900);
+	text-decoration: underline;
+	/* box-shadow: 0 2px 0 var(--blueGray900); */
 }
