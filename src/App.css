@@ -1,23 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;600;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500;700;900&display=swap");
 
 :root {
 	/* FLUENT UI https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/neutrals */
-
-	/* COLORS */
-	/* --gray220: #11100f;
-	--gray200: #1b1a19;
-	--gray180: #252423;
-	--gray160: #323130;
-	--gray140: #484644;
-	--gray120: #797775;
-	--gray100: #979593;
-	--gray80: #b3b0ad;
-	--gray60: #c8c6c4;
-	--gray40: #e1dfdd;
-	--gray20: #f3f2f1; */
-
-	/* MATERIAL PALETTE https://developer.microsoft.com/en-us/fluentui#/styles/web/colors/neutrals */
 
 	/* COLORS */
 	--blueGray900: #263238;
@@ -78,11 +62,6 @@ body {
 
 a {
 	text-decoration: none;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
 }
 
 /* TYPOGRAPHY */
