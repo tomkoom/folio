@@ -13,7 +13,7 @@ const projects = [
 		liveLink: "https://icapps.xyz/",
 		githubLink: "https://github.com/tomkoom/icApps",
 		category: "Personal project",
-		tags: ["React", "Google Sheets API", "framer-motion"],
+		tags: ["React", "Redux", "Google Sheets API", "framer-motion"],
 	},
 	{
 		name: "IndieLogo",

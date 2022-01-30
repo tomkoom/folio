@@ -9,11 +9,12 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <Nav />
+      <a href="https://bit.ly/33sPgEW" rel="norefferer noopener">Public journal</a>
+      {/* <Nav />
       <About />
       <Skills />
       <Projects />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }
