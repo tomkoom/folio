@@ -9,7 +9,7 @@ import Footer from './Components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <a href="https://bit.ly/33sPgEW" rel="norefferer noopener">Public journal</a>
+      <a href="https://bit.ly/33sPgEW" rel="norefferer noopener">Public journal →</a>
       {/* <Nav />
       <About />
       <Skills />
