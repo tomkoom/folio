@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/folio/static/css/main.cf2c2ab9.chunk.css",
-    "main.js": "/folio/static/js/main.3e5038a6.chunk.js",
-    "main.js.map": "/folio/static/js/main.3e5038a6.chunk.js.map",
+    "main.css": "/folio/static/css/main.f8846976.chunk.css",
+    "main.js": "/folio/static/js/main.ad50bb0b.chunk.js",
+    "main.js.map": "/folio/static/js/main.ad50bb0b.chunk.js.map",
     "runtime-main.js": "/folio/static/js/runtime-main.c4f0438d.js",
     "runtime-main.js.map": "/folio/static/js/runtime-main.c4f0438d.js.map",
-    "static/js/2.ac945cb3.chunk.js": "/folio/static/js/2.ac945cb3.chunk.js",
-    "static/js/2.ac945cb3.chunk.js.map": "/folio/static/js/2.ac945cb3.chunk.js.map",
+    "static/js/2.b6e6f33a.chunk.js": "/folio/static/js/2.b6e6f33a.chunk.js",
+    "static/js/2.b6e6f33a.chunk.js.map": "/folio/static/js/2.b6e6f33a.chunk.js.map",
     "index.html": "/folio/index.html",
-    "static/css/main.cf2c2ab9.chunk.css.map": "/folio/static/css/main.cf2c2ab9.chunk.css.map",
-    "static/js/2.ac945cb3.chunk.js.LICENSE.txt": "/folio/static/js/2.ac945cb3.chunk.js.LICENSE.txt"
+    "static/css/main.f8846976.chunk.css.map": "/folio/static/css/main.f8846976.chunk.css.map",
+    "static/js/2.b6e6f33a.chunk.js.LICENSE.txt": "/folio/static/js/2.b6e6f33a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c4f0438d.js",
-    "static/js/2.ac945cb3.chunk.js",
-    "static/css/main.cf2c2ab9.chunk.css",
-    "static/js/main.3e5038a6.chunk.js"
+    "static/js/2.b6e6f33a.chunk.js",
+    "static/css/main.f8846976.chunk.css",
+    "static/js/main.ad50bb0b.chunk.js"
   ]
 }
