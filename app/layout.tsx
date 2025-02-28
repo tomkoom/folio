@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   title: APP_NAME,
   description: APP_DESCRIPTION,
   icons: {
-    icon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📄</text></svg>",
+    icon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>",
   },
 };
 
@@ -62,7 +62,7 @@ export default function RootLayout({
             <footer className="mt-16 flex h-[160px] flex-wrap gap-2 px-6 py-8 text-xl font-semibold text-gray-400 xl:px-8">
               <div className="flex-1 leading-[200%]">
                 <p>
-                  Full-stack MVP dev at rapid speed 🛠️{" "}
+                  Full-stack MVP dev at rapid speed 🐇 🛠️{" "}
                   <a
                     className="transition-all duration-300 ease-out hover:text-white hover:underline"
                     href="https://twitter.com/tmkm44"
