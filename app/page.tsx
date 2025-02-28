@@ -5,10 +5,7 @@ import { Content } from "./home";
 function HomeContent() {
   return (
     <div className="mt-8">
-      <h2 className="my-2 font-bold">Apps</h2>
-      <div>
-        <Content />
-      </div>
+      <Content />
     </div>
   );
 }

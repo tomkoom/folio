@@ -4,6 +4,10 @@ import React from "react";
 const Content = () => {
   return (
     <div>
+      <header>
+        <h2 className="my-2 mb-8 text-3xl font-bold">Rapid apps dev 🛠️</h2>
+      </header>
+
       <ul className="grid grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4">
         {items.map((item: any) => (
           <li
