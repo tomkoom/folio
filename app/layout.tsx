@@ -14,6 +14,19 @@ const inter = Inter({
   display: "swap", // Optional: Improves performance by loading fallback fonts while Inter loads
 });
 
+// Customize these values to change the background pattern
+const pattern = {
+  dotSize: "1px",
+  spacing: "20px",
+  dotColor: "#171717",
+} as const;
+
+const backgroundStyle = {
+  backgroundImage: `radial-gradient(${pattern.dotColor} ${pattern.dotSize}, transparent ${pattern.dotSize})`,
+  backgroundSize: `${pattern.spacing} ${pattern.spacing}`,
+  backgroundPosition: "center",
+} as const;
+
 export const metadata: Metadata = {
   title: APP_NAME,
   description: "",
@@ -38,16 +51,27 @@ export default function RootLayout({
           // enableSystem
           disableTransitionOnChange
         >
-          <div className="flex min-h-screen flex-col bg-black">
+          <div
+            className="flex min-h-screen flex-col bg-black"
+            style={backgroundStyle}
+          >
             <Navigation />
             <main className="mx-6 mt-4 flex-1 flex-grow xl:mx-8">
               {children}
             </main>
 
-            <footer className="mt-16 flex flex-wrap gap-2 bg-neutral-950 px-4 pb-12 pt-8 text-sm font-semibold text-gray-400">
-              <div className="flex-1">
+            <footer className="mt-16 flex h-[160px] flex-wrap gap-2 px-6 py-8 text-xl font-semibold text-gray-400 xl:px-8">
+              <div className="flex flex-1 flex-col gap-1">
                 <span>
-                  &copy; {new Date().getFullYear()} {APP_NAME}
+                  🛠️ by{" "}
+                  <a
+                    className="transition-all duration-300 ease-out hover:text-white hover:underline"
+                    href="https://twitter.com/tmkm44"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @tmkm44
+                  </a>
                 </span>
               </div>
 
