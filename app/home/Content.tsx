@@ -1,7 +1,8 @@
+import { Icon } from "@/components/Icon";
 import { items } from "@/data/items";
-import React from "react";
+import React, { FC } from "react";
 
-const Content = () => {
+const Content: FC = () => {
   return (
     <div>
       <header>
@@ -14,8 +15,21 @@ const Content = () => {
             key={item.id}
             className="transform-gpu cursor-pointer rounded-lg bg-neutral-950 p-6 leading-[150%] transition-all duration-300 ease-out hover:bg-neutral-900 hover:shadow-lg hover:shadow-neutral-900/30"
           >
-            <p className="text-xl font-bold">{item.name}</p>
-            <p className="text-base text-gray-400">{item.description}</p>
+            <a
+              className="flex flex-col gap-1"
+              href={item.website}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <h3 className="text-2xl font-bold">{item.name}</h3>
+              <p className="text-base text-gray-400">{item.description}</p>
+              {item.website !== "#" && (
+                <span className="flex items-center gap-2">
+                  <span>Visit</span>
+                  <Icon lucideName="ArrowUpRight" className="h-4 w-4" />
+                </span>
+              )}
+            </a>
           </li>
         ))}
       </ul>
