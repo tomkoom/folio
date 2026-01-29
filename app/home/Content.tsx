@@ -1,16 +1,16 @@
 import { Icon } from "@/components/Icon";
-import { items } from "@/data/items";
+import { PROJECTS } from "@/data";
 import React, { FC } from "react";
 
-const Content: FC = () => {
+export default function Content() {
   return (
     <div>
       <header>
-        <h2 className="my-2 mb-8 text-3xl font-bold">Rapid apps dev 🛠️</h2>
+        <h2 className="my-2 mb-8 text-3xl font-bold">Rapid apps development 🛠️</h2>
       </header>
 
       <ul className="grid grid-cols-2 gap-3 lg:grid-cols-3 xl:grid-cols-4">
-        {items.map((item: any) => (
+        {PROJECTS.map((item: any) => (
           <li
             key={item.id}
             className="transform-gpu cursor-pointer rounded-lg bg-neutral-950 p-6 leading-[150%] transition-all duration-300 ease-out hover:bg-neutral-900 hover:shadow-lg hover:shadow-neutral-900/30"
@@ -37,4 +37,4 @@ const Content: FC = () => {
   );
 };
 
-export default Content;
+

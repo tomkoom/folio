@@ -1,11 +1,8 @@
-// import { CookieBanner } from "@/components/CookieBanner";
 import { Navigation } from "@/components/layout";
 import { APP_DESCRIPTION, APP_NAME } from "@/constants";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
-// import Link from "next/link";
-import { Toaster } from "react-hot-toast";
 import "./globals.css";
 
 const inter = Inter({
@@ -62,7 +59,7 @@ export default function RootLayout({
             <footer className="mt-16 flex h-[160px] flex-wrap gap-2 px-6 py-8 text-xl font-semibold text-gray-400 xl:px-8">
               <div className="flex-1 leading-[200%]">
                 <p>
-                  Full-stack MVP dev at rapid speed 🐇 🛠️{" "}
+                  Full-stack MVP development at rapid speed 🐇 🛠️{" "}
                   <a
                     className="transition-all duration-300 ease-out hover:text-white hover:underline"
                     href="https://twitter.com/tmkm44"
@@ -73,30 +70,9 @@ export default function RootLayout({
                   </a>
                 </p>
               </div>
-
-              {/* <div className="flex-1">
-                <Link
-                  href="/cookie"
-                  className="hover:text-white hover:underline"
-                >
-                  Cookie
-                </Link>
-              </div> */}
             </footer>
-
-            {/* ... */}
-            {/* <CookieBanner /> */}
           </div>
-          <Toaster
-            toastOptions={{
-              style: {
-                fontSize: "14px",
-                fontWeight: "bold",
-                color: "white",
-                backgroundColor: "#262626",
-              },
-            }}
-          />
+
         </ThemeProvider>
       </body>
     </html>
