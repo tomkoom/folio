@@ -37,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${inter.variable} font-[family-name:var(--font-inter)] antialiased`}
       >
@@ -59,14 +59,23 @@ export default function RootLayout({
             <footer className="mt-16 flex h-[160px] flex-wrap gap-2 px-6 py-8 text-xl font-semibold text-gray-400 xl:px-8">
               <div className="flex-1 leading-[200%]">
                 <p>
-                  Full-stack MVP development at rapid speed 🐇 🛠️{" "}
+                  Full-stack MVP development at rapid speed 🛠️{" "}
                   <a
-                    className="transition-all duration-300 ease-out hover:text-white hover:underline"
+                    className="text-gray-50 transition-all duration-300 ease-out hover:text-white hover:underline"
                     href="https://twitter.com/tmkm44"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     @tmkm44
+                  </a>
+                  {" · "}
+                  <a
+                    className="text-gray-50 transition-all duration-300 ease-out hover:text-white hover:underline"
+                    href="https://github.com/tomkoom"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    GitHub
                   </a>
                 </p>
               </div>
