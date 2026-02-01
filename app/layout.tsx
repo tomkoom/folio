@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { Footer } from "./home";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -56,30 +57,7 @@ export default function RootLayout({
               {children}
             </main>
 
-            <footer className="mt-16 flex h-[160px] flex-wrap gap-2 px-6 py-8 text-xl font-semibold text-gray-400 xl:px-8">
-              <div className="flex-1 leading-[200%]">
-                <p>
-                  Full-stack MVP development at rapid speed 🛠️{" "}
-                  <a
-                    className="text-gray-50 transition-all duration-300 ease-out hover:text-white hover:underline"
-                    href="https://twitter.com/tmkm44"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    @tmkm44
-                  </a>
-                  {" · "}
-                  <a
-                    className="text-gray-50 transition-all duration-300 ease-out hover:text-white hover:underline"
-                    href="https://github.com/tomkoom"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    GitHub
-                  </a>
-                </p>
-              </div>
-            </footer>
+            <Footer />
           </div>
 
         </ThemeProvider>

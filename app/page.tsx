@@ -4,9 +4,7 @@ import { Content } from "./home";
 
 function HomeContent() {
   return (
-    <div className="mt-8">
-      <Content />
-    </div>
+    <Content />
   );
 }
 

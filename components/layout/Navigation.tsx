@@ -1,9 +1,8 @@
 "use client";
 import { APP_NAME } from "@/constants";
 import Link from "next/link";
-import { FC } from "react";
 
-export const Navigation: FC = () => {
+export default function Navigation() {
   return (
     <nav className="flex h-20 flex-wrap items-center justify-between px-6 xl:px-8">
       <Link
