@@ -1,10 +1,9 @@
-import { Navigation } from "@/components/layout";
+import { Footer, Navigation } from "@/components/layout";
 import { APP_DESCRIPTION, APP_NAME } from "@/constants";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Footer } from "./home";
 
 const inter = Inter({
   variable: "--font-inter",
