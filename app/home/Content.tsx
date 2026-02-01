@@ -1,6 +1,6 @@
 import { Icon } from "@/components/Icon";
 import { OPEN_CONTRIBUTIONS, PROJECTS } from "@/data";
-// import { Project } from "@/data/projects";
+
 
 const statusConfig = {
   "in-progress": {
@@ -22,7 +22,7 @@ export default function Content() {
     <div className="mt-8">
       <section className="mb-8">
         <header>
-          <h1 className="my-2 mb-8 text-3xl font-bold">tmkm44's projects</h1>
+          <h1 className="my-2 mb-8 text-3xl font-bold">tmkm's projects</h1>
         </header>
 
         <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
