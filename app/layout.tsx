@@ -24,8 +24,25 @@ const backgroundStyle = {
 } as const;
 
 export const metadata: Metadata = {
-  title: APP_NAME,
-  description: APP_DESCRIPTION,
+  title: {
+    default: APP_NAME,
+    template: `%s | ${APP_NAME}`,
+  },
+  description: APP_DESCRIPTION || "Portfolio of tmkm - Full-stack developer open to collaboration and freelance work",
+  keywords: ["portfolio", "developer", "full-stack", "freelance", "collaboration"],
+  authors: [{ name: "tmkm44" }],
+  creator: "tmkm44",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    siteName: APP_NAME,
+    title: APP_NAME,
+    description: APP_DESCRIPTION || "Portfolio of tmkm - Full-stack developer open to collaboration and freelance work",
+  },
+  twitter: {
+    card: "summary",
+    creator: "@tmkm44",
+  },
   icons: {
     icon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>",
   },
