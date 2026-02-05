@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
   {
     id: "cyql-io",
     name: "cyql.io",
-    description: "Internet Computer ecosystem directory",
+    description: "Internet Computer ecosystem directory.",
     website: "https://cyql.io",
     tags: ["react", "motoko", "smart-contracts", "tailwindcss", "typescript", "web-app"],
     bgColor: "#000000",
@@ -92,7 +92,7 @@ export const PROJECTS: Project[] = [
   {
     id: "flipduel",
     name: "cyql.io: FlipDuel",
-    description: "Live 1v1 coinflip battles. Winner takes the pot",
+    description: "Fully functional 1v1 coin-flip game implemented as a smart contract written in Motoko, the native programming language for canisters (smart contracts) on the Internet Computer blockchain. Players can create a duel or match an existing one — the winner receives 2× the total stake. The game is deployed directly on an Internet Computer canister and uses the ICP randomness library and tooling to generate provably fair random outcomes. All payments are processed instantly in ICP on-chain.",
     website: "https://cyql.io/#/games/flipduel",
     useMetadata: true,
     tags: ["react", "motoko", "smart-contracts", "tailwindcss", "typescript", "web-app", "game"],
@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
   {
     id: "g4mehub",
     name: "g4mehub.xyz",
-    description: "A web app delivering cryptographically provably fair, casino-grade games with fully verifiable results and trustless gameplay",
+    description: "A web app delivering cryptographically provably fair, casino-grade games with fully verifiable results and trustless gameplay.",
     website: "https://g4mehub.xyz/",
     tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel", "solana", "game"],
     bgColor: "#000000",
@@ -116,7 +116,7 @@ export const PROJECTS: Project[] = [
   {
     id: "getbadge",
     name: "GetBadge.io",
-    description: "Instantly create live data badges",
+    description: "Instantly create live data badges.",
     website: "https://getbadge.io/",
     tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel"],
     bgColor: "#000000",
@@ -128,7 +128,7 @@ export const PROJECTS: Project[] = [
   {
     id: "royale",
     name: "Royale",
-    description: "My portfolio",
+    description: "Royale.gg is a web-based case opening and battle platform where users can open virtual mystery boxes and participate in real-time competitive case battles. The project includes interactive UI components, animated opening sequences, live game states, and responsive layouts designed for fast-paced user interaction. As a frontend collaboration, the work involved building and refining user-facing interfaces, implementing real-time updates, ensuring smooth gameplay flows, and contributing to the overall usability and performance of the platform within a modern web stack.",
     website: "https://royale.gg/",
     tags: ["react", "tailwindcss", "typescript", "web-app", "game"],
     bgColor: "#000000",
@@ -140,7 +140,7 @@ export const PROJECTS: Project[] = [
   {
     id: "d4ys",
     name: "d4ys",
-    description: "A lightweight countdown tracker for events",
+    description: "A lightweight countdown tracker for events.",
     website: "https://d4ys.vercel.app",
     tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
     bgColor: "#000000",
@@ -152,7 +152,7 @@ export const PROJECTS: Project[] = [
   {
     id: "mesh-gradient-wallpapers",
     name: "Mesh Gradient Wallpapers",
-    description: "Craft beautiful gradient backgrounds with a few taps",
+    description: "Craft beautiful gradient backgrounds with a few taps.",
     website: "#",
     tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
     bgColor: "#000000",
@@ -164,7 +164,7 @@ export const PROJECTS: Project[] = [
   {
     id: "cover-generator",
     name: "Cover Generator",
-    description: "A cover generator",
+    description: "A cover generator.",
     website: "#",
     tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
     bgColor: "#000000",
