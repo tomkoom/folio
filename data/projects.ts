@@ -7,6 +7,8 @@ export interface Project {
   bgColor: string;
   textColor: string;
   status: "in-progress" | "completed" | "not-started";
+  /** When true, project card uses metadata fetched from website (OG-style). When false, uses local name/description. */
+  useMetadata?: boolean;
 }
 
 export type ProjectIntent =
@@ -51,12 +53,14 @@ export const PROJECTS: Project[] = [
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
+    useMetadata: true,
   },
   {
     id: "flipduel",
     name: "FlipDuel",
     description: "Live 1v1 coinflip battles. Winner takes the pot",
     website: "https://cyql.io/#/games/flipduel",
+    useMetadata: true,
     tags: ["react", "motoko", "smart-contracts", "tailwindcss", "typescript", "web-app"],
     bgColor: "#000000",
     textColor: "#ffffff",
@@ -71,6 +75,7 @@ export const PROJECTS: Project[] = [
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
+    useMetadata: true,
   },
   {
     id: "mesh-gradient-wallpapers",
@@ -81,6 +86,7 @@ export const PROJECTS: Project[] = [
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
+    useMetadata: false,
   },
   {
     id: "cover-generator",
@@ -91,5 +97,6 @@ export const PROJECTS: Project[] = [
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
+    useMetadata: false,
   },
 ];

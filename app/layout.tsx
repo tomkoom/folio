@@ -1,4 +1,5 @@
 import { Footer, Navigation } from "@/components/layout";
+import { QueryProvider } from "@/components/providers/QueryProvider";
 import { APP_DESCRIPTION, APP_NAME } from "@/constants";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
@@ -61,21 +62,21 @@ export default function RootLayout({
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
-          // enableSystem
           disableTransitionOnChange
         >
-          <div
-            className="flex min-h-screen flex-col bg-black"
-            style={backgroundStyle}
-          >
-            <Navigation />
-            <main className="mx-6 mt-4 flex-1 flex-grow xl:mx-8">
-              {children}
-            </main>
+          <QueryProvider>
+            <div
+              className="flex min-h-screen flex-col bg-black"
+              style={backgroundStyle}
+            >
+              <Navigation />
+              <main className="mx-6 mt-4 flex-1 flex-grow xl:mx-8">
+                {children}
+              </main>
 
-            <Footer />
-          </div>
-
+              <Footer />
+            </div>
+          </QueryProvider>
         </ThemeProvider>
       </body>
     </html>
