@@ -1,3 +1,6 @@
+/** Distinguishes commercial work from personal/side projects for filtering and display. */
+export type ProjectKind = "commercial" | "personal" | "side-project";
+
 export interface Project {
   id: string;
   name: string;
@@ -9,6 +12,8 @@ export interface Project {
   status: "in-progress" | "completed" | "not-started";
   /** When true, project card uses metadata fetched from website (OG-style). When false, uses local name/description. */
   useMetadata?: boolean;
+  /** commercial = paid/client work; personal = own tools/portfolio; side-project = side projects / experiments. */
+  kind: ProjectKind;
 }
 
 export type ProjectIntent =
@@ -43,7 +48,35 @@ export const OPEN_CONTRIBUTIONS = [
   }
 ]
 
+export const PROJECT_KIND_ORDER: ProjectKind[] = ["side-project", "commercial", "personal"];
+
+export const PROJECT_KIND_LABELS: Record<ProjectKind, string> = {
+  commercial: "Commercial",
+  "side-project": "Side projects",
+  personal: "Personal",
+};
+
+export function groupProjectsByKind(projects: Project[]): Map<ProjectKind, Project[]> {
+  const map = new Map<ProjectKind, Project[]>();
+  for (const kind of PROJECT_KIND_ORDER) {
+    map.set(kind, projects.filter((p) => p.kind === kind));
+  }
+  return map;
+}
+
 export const PROJECTS: Project[] = [
+  {
+    id: "clawrace",
+    name: "ClawRace",
+    description: "Autonomous agents race to solve tasks. First correct submission wins the pool",
+    website: "https://clawrace.xyz/",
+    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel", "game", "ai", "agents", "openclaw"],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "in-progress",
+    useMetadata: true,
+    kind: "side-project",
+  },
   {
     id: "cyql-io",
     name: "cyql.io",
@@ -54,10 +87,11 @@ export const PROJECTS: Project[] = [
     textColor: "#ffffff",
     status: "in-progress",
     useMetadata: true,
+    kind: "side-project",
   },
   {
     id: "flipduel",
-    name: "FlipDuel",
+    name: "cyql.io: FlipDuel",
     description: "Live 1v1 coinflip battles. Winner takes the pot",
     website: "https://cyql.io/#/games/flipduel",
     useMetadata: true,
@@ -65,6 +99,31 @@ export const PROJECTS: Project[] = [
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "completed",
+    kind: "side-project",
+  },
+  {
+    id: "royale",
+    name: "Royale",
+    description: "My portfolio",
+    website: "https://royale.gg/",
+    tags: ["react", "tailwindcss", "typescript", "web-app", "game"],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "completed",
+    useMetadata: true,
+    kind: "commercial",
+  },
+  {
+    id: "getbadge",
+    name: "GetBadge.io",
+    description: "Instantly create live data badges",
+    website: "https://getbadge.io/",
+    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel"],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "in-progress",
+    useMetadata: true,
+    kind: "personal",
   },
   {
     id: "d4ys",
@@ -76,6 +135,7 @@ export const PROJECTS: Project[] = [
     textColor: "#ffffff",
     status: "in-progress",
     useMetadata: true,
+    kind: "personal",
   },
   {
     id: "mesh-gradient-wallpapers",
@@ -87,6 +147,7 @@ export const PROJECTS: Project[] = [
     textColor: "#ffffff",
     status: "in-progress",
     useMetadata: false,
+    kind: "personal",
   },
   {
     id: "cover-generator",
@@ -98,5 +159,6 @@ export const PROJECTS: Project[] = [
     textColor: "#ffffff",
     status: "in-progress",
     useMetadata: false,
+    kind: "personal",
   },
 ];

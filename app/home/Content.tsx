@@ -1,10 +1,17 @@
 import { ContributionCard } from "@/components/ContributionCard";
 import { ProjectCard } from "@/components/ProjectCard";
-import { OPEN_CONTRIBUTIONS, PROJECTS } from "@/data";
 import { IS_DEV } from "@/constants";
+import {
+  groupProjectsByKind,
+  OPEN_CONTRIBUTIONS,
+  PROJECT_KIND_LABELS,
+  PROJECT_KIND_ORDER,
+  PROJECTS,
+} from "@/data";
 import { OGTester } from "./OGTester";
 
 export default function Content() {
+  const grouped = groupProjectsByKind(PROJECTS);
   return (
     <div className="mt-8">
       <section className="mb-8">
@@ -12,11 +19,24 @@ export default function Content() {
           <h1 className="my-2 mb-8 text-3xl font-bold">tmkm's projects</h1>
         </header>
 
-        <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-          {PROJECTS.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </ul>
+        <div className="space-y-12">
+          {PROJECT_KIND_ORDER.map((kind) => {
+            const projects = grouped.get(kind) ?? [];
+            if (projects.length === 0) return null;
+            return (
+              <div key={kind}>
+                <h2 className="mb-4 text-xl font-semibold text-gray-300">
+                  {PROJECT_KIND_LABELS[kind]}
+                </h2>
+                <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                  {projects.map((project) => (
+                    <ProjectCard key={project.id} project={project} />
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
+        </div>
       </section>
 
       <section className="mt-16">
