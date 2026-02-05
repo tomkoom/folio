@@ -10,7 +10,7 @@ export default function Navigation() {
 
   return (
     <nav
-      className="flex h-20 flex-wrap items-center justify-between gap-4 px-6 xl:px-8"
+      className="flex h-16 min-h-[4rem] flex-wrap items-center justify-between gap-3 px-4 sm:gap-4 sm:px-6 sm:h-20 xl:px-8"
       aria-label="Main navigation"
     >
       <Link
@@ -18,14 +18,14 @@ export default function Navigation() {
         className="text-neutral-200 transition-colors duration-300 ease-out hover:text-white"
         aria-label="Home"
       >
-        <span className="font-mono text-lg font-black">{APP_NAME}</span>
+        <span className="font-mono text-base font-black sm:text-lg">{APP_NAME}</span>
       </Link>
-      <ul className="flex items-center gap-6">
+      <ul className="flex items-center gap-4 sm:gap-6">
         {NAV_LINKS.map((link) => (
           <li key={link.href}>
             <Link
               href={link.href}
-              className={`text-base font-semibold transition-colors duration-200 ${pathname === link.href
+              className={`text-sm font-semibold transition-colors duration-200 sm:text-base ${pathname === link.href
                 ? "text-white"
                 : "text-gray-400 hover:text-white"
                 }`}

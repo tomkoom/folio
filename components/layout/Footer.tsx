@@ -6,9 +6,9 @@ const LINKS = [
 
 export default function Footer() {
     return (
-        <footer className="mt-16 flex h-[160px] flex-wrap gap-2 px-6 py-8 text-xl font-semibold text-gray-400 xl:px-8">
-            <div className="flex-1 leading-[200%]">
-                <p>
+        <footer className="mt-16 flex min-h-[120px] flex-wrap gap-2 px-4 py-6 text-base font-semibold text-gray-400 sm:px-6 sm:py-8 sm:text-xl sm:leading-[200%] xl:px-8">
+            <div className="flex-1 leading-relaxed sm:leading-[200%]">
+                <p className="break-words">
                     Open to collaboration and freelance work 🤝 Hit me up on{" "}
                     {LINKS.map((link, index) => (
                         <span key={link.href}>

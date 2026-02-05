@@ -15,8 +15,8 @@ export function ContributionCard({ contribution }: ContributionCardProps) {
 
   return (
     <li className="group">
-      <div className="flex items-center gap-4 rounded-lg bg-neutral-950 px-4 py-3 transition-colors duration-200 hover:bg-neutral-900">
-        <span className="flex-1 font-semibold capitalize text-gray-300">
+      <div className="flex items-center gap-3 rounded-lg bg-neutral-950 px-3 py-3 transition-colors duration-200 hover:bg-neutral-900 sm:gap-4 sm:px-4">
+        <span className="min-w-0 flex-1 break-words font-semibold capitalize text-gray-300">
           {displayName}
         </span>
         <div className="flex gap-2">

@@ -70,7 +70,7 @@ export default function RootLayout({
               style={backgroundStyle}
             >
               <Navigation />
-              <main className="mx-6 mt-4 flex-1 flex-grow xl:mx-8">
+              <main className="mx-4 mt-4 flex-1 flex-grow sm:mx-6 xl:mx-8">
                 {children}
               </main>
 

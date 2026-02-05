@@ -4,11 +4,11 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="mt-8">
-      <header className="mb-8">
-        <h1 className="mb-2 text-3xl font-bold">About</h1>
+      <header className="mb-6 sm:mb-8">
+        <h1 className="mb-2 text-2xl font-bold sm:text-3xl">About</h1>
       </header>
 
-      <section className="max-w-2xl space-y-6 text-base leading-relaxed text-gray-300">
+      <section className="max-w-2xl space-y-5 text-base leading-relaxed text-gray-300 sm:space-y-6">
         <p>
           This is <strong className="text-white">tmkm&apos;s</strong> portfolio.
           I&apos;m a full-stack developer exploring web3, AI, and AI agents.
