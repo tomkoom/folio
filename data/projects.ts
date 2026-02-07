@@ -32,6 +32,11 @@ export type ProjectType =
 
 export const OPEN_CONTRIBUTIONS = [
   {
+    id: "folio",
+    github: "https://github.com/tomkoom/folio",
+    appLink: "https://cr4ft.vercel.app/"
+  },
+  {
     id: "coins-treemap",
     github: "https://github.com/tomkoom/coins-treemap-chart",
     appLink: "https://tomkoom.github.io/coins-treemap-chart/"

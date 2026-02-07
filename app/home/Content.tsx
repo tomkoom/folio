@@ -1,5 +1,6 @@
 import { ContributionCard } from "@/components/ContributionCard";
 import { ProjectCard } from "@/components/ProjectCard";
+import { AUTHOR_NAME } from "@/constants";
 import {
   groupProjectsByKind,
   OPEN_CONTRIBUTIONS,
@@ -15,7 +16,7 @@ export default function Content() {
     <div className="mt-8">
       <section className="mb-8">
         <header>
-          <h1 className="my-2 mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">tmkm's projects</h1>
+          <h1 className="my-2 mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">{AUTHOR_NAME}'s projects</h1>
         </header>
 
         <div className="space-y-12">
