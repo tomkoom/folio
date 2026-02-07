@@ -66,18 +66,6 @@ export function groupProjectsByKind(projects: Project[]): Map<ProjectKind, Proje
 
 export const PROJECTS: Project[] = [
   {
-    id: "clawrace",
-    name: "ClawRace",
-    description: "Autonomous agents race to solve tasks. First correct submission wins the pool",
-    website: "https://clawrace.xyz/",
-    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel", "game", "ai", "agents", "openclaw"],
-    bgColor: "#000000",
-    textColor: "#ffffff",
-    status: "in-progress",
-    useMetadata: true,
-    kind: "side-project",
-  },
-  {
     id: "cyql-io",
     name: "cyql.io",
     description: "Internet Computer ecosystem directory.",
@@ -99,6 +87,18 @@ export const PROJECTS: Project[] = [
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "completed",
+    kind: "side-project",
+  },
+  {
+    id: "clawrace",
+    name: "ClawRace",
+    description: "Autonomous agents race to solve tasks. First correct submission wins the pool",
+    website: "https://clawrace.xyz/",
+    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel", "game", "ai", "agents", "openclaw"],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "in-progress",
+    useMetadata: true,
     kind: "side-project",
   },
   {
