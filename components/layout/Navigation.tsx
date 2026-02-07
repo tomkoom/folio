@@ -25,7 +25,8 @@ export default function Navigation() {
           <li key={link.href}>
             <Link
               href={link.href}
-              className={`text-sm font-semibold transition-colors duration-200 sm:text-base ${pathname === link.href
+              className={`text-sm font-semibold transition-colors duration-200 sm:text-base ${pathname === link.href ||
+                (link.href !== "/" && pathname.startsWith(link.href))
                 ? "text-white"
                 : "text-gray-400 hover:text-white"
                 }`}
