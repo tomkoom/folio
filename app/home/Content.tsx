@@ -1,4 +1,5 @@
 import { ContributionCard } from "@/components/ContributionCard";
+import { HomeHero } from "@/components/HomeHero";
 import { ProjectCard } from "@/components/ProjectCard";
 import { AUTHOR_NAME } from "@/constants";
 import {
@@ -14,9 +15,13 @@ export default function Content() {
   const grouped = groupProjectsByKind(PROJECTS);
   return (
     <div className="mt-8">
+      <HomeHero />
+
       <section className="mb-8">
         <header>
-          <h1 className="my-2 mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">{AUTHOR_NAME}'s projects</h1>
+          <h2 className="my-2 mb-6 text-2xl font-bold sm:mb-8 sm:text-3xl">
+            {AUTHOR_NAME}&apos;s projects
+          </h2>
         </header>
 
         <div className="space-y-12">
@@ -41,12 +46,17 @@ export default function Content() {
 
       <section className="mt-16">
         <header>
-          <h2 className="mb-3 text-xl font-bold sm:mb-4 sm:text-2xl">Open Contributions</h2>
+          <h2 className="mb-3 text-xl font-bold sm:mb-4 sm:text-2xl">
+            Open Contributions
+          </h2>
         </header>
 
         <ul className="flex flex-col gap-2 sm:grid sm:grid-cols-2 lg:grid-cols-3">
           {OPEN_CONTRIBUTIONS.map((contribution) => (
-            <ContributionCard key={contribution.id} contribution={contribution} />
+            <ContributionCard
+              key={contribution.id}
+              contribution={contribution}
+            />
           ))}
         </ul>
       </section>
@@ -55,5 +65,3 @@ export default function Content() {
     </div>
   );
 }
-
-
