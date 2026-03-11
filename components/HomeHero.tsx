@@ -2,9 +2,12 @@ export function HomeHero() {
   return (
     <header className="mb-10 sm:mb-12 lg:mb-14">
       <h1 className="mb-3 text-xl font-bold lowercase leading-tight tracking-tight text-white sm:mb-4 sm:text-2xl md:text-3xl lg:text-4xl">
+        real-time web3 apps, trading, betting & gaming interfaces, ai agents ui
+      </h1>
+      {/* <h1 className="mb-3 text-xl font-bold lowercase leading-tight tracking-tight text-white sm:mb-4 sm:text-2xl md:text-3xl lg:text-4xl">
         frontend engineer — real-time web3 apps, trading, betting & gaming
         interfaces, ai agents ui
-      </h1>
+      </h1> */}
       <p className="max-w-2xl text-sm lowercase leading-relaxed text-gray-400 sm:text-base">
         <span className="block sm:inline">
           focused on ux-driven interfaces for complex systems: dashboards,

@@ -17,11 +17,11 @@ export interface Project {
 }
 
 export type ProjectIntent =
-  | "production"     // full product, real users, real stakes
-  | "experimental"   // trying ideas, APIs, concepts
-  | "educational"    // learning-focused, tutorials, explainers
-  | "research"       // exploration, data analysis, experiments
-  | "infographic";   // single-page visual / explanatory content
+  | "production" // full product, real users, real stakes
+  | "experimental" // trying ideas, APIs, concepts
+  | "educational" // learning-focused, tutorials, explainers
+  | "research" // exploration, data analysis, experiments
+  | "infographic"; // single-page visual / explanatory content
 
 export type ProjectType =
   | "product"
@@ -32,28 +32,32 @@ export type ProjectType =
 
 export const OPEN_CONTRIBUTIONS = [
   {
-    id: "folio",
+    id: "folio (this site)",
     github: "https://github.com/tomkoom/folio",
-    appLink: "https://cr4ft.vercel.app/"
+    appLink: "https://cr4ft.vercel.app/",
   },
   {
     id: "coins-treemap",
     github: "https://github.com/tomkoom/coins-treemap-chart",
-    appLink: "https://tomkoom.github.io/coins-treemap-chart/"
+    appLink: "https://tomkoom.github.io/coins-treemap-chart/",
   },
   {
     id: "matrix-bg",
     github: "https://github.com/tomkoom/matrix-bg",
-    appLink: "https://tomkoom.github.io/matrix-bg/"
+    appLink: "https://tomkoom.github.io/matrix-bg/",
   },
   {
     id: "string-to-color",
     github: "https://github.com/tomkoom/string-to-color",
-    appLink: "https://tomkoom.github.io/string-to-color/"
-  }
-]
+    appLink: "https://tomkoom.github.io/string-to-color/",
+  },
+];
 
-export const PROJECT_KIND_ORDER: ProjectKind[] = ["side-project", "commercial", "personal"];
+export const PROJECT_KIND_ORDER: ProjectKind[] = [
+  "side-project",
+  "commercial",
+  "personal",
+];
 
 export const PROJECT_KIND_LABELS: Record<ProjectKind, string> = {
   commercial: "Commercial",
@@ -61,10 +65,15 @@ export const PROJECT_KIND_LABELS: Record<ProjectKind, string> = {
   personal: "Personal",
 };
 
-export function groupProjectsByKind(projects: Project[]): Map<ProjectKind, Project[]> {
+export function groupProjectsByKind(
+  projects: Project[],
+): Map<ProjectKind, Project[]> {
   const map = new Map<ProjectKind, Project[]>();
   for (const kind of PROJECT_KIND_ORDER) {
-    map.set(kind, projects.filter((p) => p.kind === kind));
+    map.set(
+      kind,
+      projects.filter((p) => p.kind === kind),
+    );
   }
   return map;
 }
@@ -75,7 +84,14 @@ export const PROJECTS: Project[] = [
     name: "cyql.io",
     description: "Internet Computer ecosystem directory.",
     website: "https://cyql.io",
-    tags: ["react", "motoko", "smart-contracts", "tailwindcss", "typescript", "web-app"],
+    tags: [
+      "react",
+      "motoko",
+      "smart-contracts",
+      "tailwindcss",
+      "typescript",
+      "web-app",
+    ],
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
@@ -85,10 +101,40 @@ export const PROJECTS: Project[] = [
   {
     id: "flipduel",
     name: "cyql.io: FlipDuel",
-    description: "Fully functional 1v1 coin-flip game implemented as a smart contract written in Motoko, the native programming language for canisters (smart contracts) on the Internet Computer blockchain. Players can create a duel or match an existing one — the winner receives 2× the total stake. The game is deployed directly on an Internet Computer canister and uses the ICP randomness library and tooling to generate provably fair random outcomes. All payments are processed instantly in ICP on-chain.",
+    description:
+      "Fully functional 1v1 coin-flip game implemented as a smart contract written in Motoko, the native programming language for canisters (smart contracts) on the Internet Computer blockchain. Players can create a duel or match an existing one — the winner receives 2× the total stake. The game is deployed directly on an Internet Computer canister and uses the ICP randomness library and tooling to generate provably fair random outcomes. All payments are processed instantly in ICP on-chain.",
     website: "https://cyql.io/#/games/flipduel",
     useMetadata: true,
-    tags: ["react", "motoko", "smart-contracts", "tailwindcss", "typescript", "web-app", "game"],
+    tags: [
+      "react",
+      "motoko",
+      "smart-contracts",
+      "tailwindcss",
+      "typescript",
+      "web-app",
+      "game",
+    ],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "completed",
+    kind: "side-project",
+  },
+  {
+    id: "pump-monitor",
+    name: "Pump Monitor",
+    description:
+      "Pump Monitor — an automated system that detects abnormal price movements across crypto markets. It identifies potential pump events, classifies them as manipulation or organic activity, and highlights high-volatility assets where reversals may occur.",
+    website: "https://t.me/+0TT9yYbgWzAzMmNi",
+    useMetadata: true,
+    tags: [
+      "nodejs",
+      "typescript",
+      "telegram-bot",
+      "grammy",
+      "trading-bot",
+      "crypto-trading",
+      "automation",
+    ],
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "completed",
@@ -97,9 +143,21 @@ export const PROJECTS: Project[] = [
   {
     id: "clawrace",
     name: "ClawRace",
-    description: "Autonomous agents race to solve tasks. First correct submission wins the pool",
+    description:
+      "Autonomous agents race to solve tasks. First correct submission wins the pool",
     website: "https://clawrace.xyz/",
-    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel", "game", "ai", "agents", "openclaw"],
+    tags: [
+      "nextjs",
+      "tailwindcss",
+      "typescript",
+      "web-app",
+      "mongodb",
+      "vercel",
+      "game",
+      "ai",
+      "agents",
+      "openclaw",
+    ],
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
@@ -109,9 +167,19 @@ export const PROJECTS: Project[] = [
   {
     id: "g4mehub",
     name: "g4mehub.xyz",
-    description: "A web app delivering cryptographically provably fair, casino-grade games with fully verifiable results and trustless gameplay.",
+    description:
+      "A web app delivering cryptographically provably fair, casino-grade games with fully verifiable results and trustless gameplay.",
     website: "https://g4mehub.xyz/",
-    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel", "solana", "game"],
+    tags: [
+      "nextjs",
+      "tailwindcss",
+      "typescript",
+      "web-app",
+      "mongodb",
+      "vercel",
+      "solana",
+      "game",
+    ],
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
@@ -123,7 +191,14 @@ export const PROJECTS: Project[] = [
     name: "GetBadge.io",
     description: "Instantly create live data badges.",
     website: "https://getbadge.io/",
-    tags: ["nextjs", "tailwindcss", "typescript", "web-app", "mongodb", "vercel"],
+    tags: [
+      "nextjs",
+      "tailwindcss",
+      "typescript",
+      "web-app",
+      "mongodb",
+      "vercel",
+    ],
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "in-progress",
@@ -133,7 +208,8 @@ export const PROJECTS: Project[] = [
   {
     id: "royale",
     name: "Royale",
-    description: "Royale.gg is a web-based case opening and battle platform where users can open virtual mystery boxes and participate in real-time competitive case battles. The project includes interactive UI components, animated opening sequences, live game states, and responsive layouts designed for fast-paced user interaction. As a frontend collaboration, the work involved building and refining user-facing interfaces, implementing real-time updates, ensuring smooth gameplay flows, and contributing to the overall usability and performance of the platform within a modern web stack.",
+    description:
+      "Royale.gg is a web-based case opening and battle platform where users can open virtual mystery boxes and participate in real-time competitive case battles. The project includes interactive UI components, animated opening sequences, live game states, and responsive layouts designed for fast-paced user interaction. As a frontend collaboration, the work involved building and refining user-facing interfaces, implementing real-time updates, ensuring smooth gameplay flows, and contributing to the overall usability and performance of the platform within a modern web stack.",
     website: "https://royale.gg/",
     tags: ["react", "tailwindcss", "typescript", "web-app", "game"],
     bgColor: "#000000",
