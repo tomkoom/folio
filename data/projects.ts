@@ -14,6 +14,8 @@ export interface Project {
   useMetadata?: boolean;
   /** commercial = paid/client work; personal = own tools/portfolio; side-project = side projects / experiments. */
   kind: ProjectKind;
+  /** X (Twitter) URL - can be profile or post */
+  xUrl?: string;
 }
 
 export type ProjectIntent =
@@ -97,6 +99,7 @@ export const PROJECTS: Project[] = [
     status: "in-progress",
     useMetadata: true,
     kind: "side-project",
+    xUrl: "https://x.com/cyqlio",
   },
   {
     id: "flipduel",
@@ -118,6 +121,7 @@ export const PROJECTS: Project[] = [
     textColor: "#ffffff",
     status: "completed",
     kind: "side-project",
+    xUrl: "https://x.com/cyqlio",
   },
   {
     id: "pump-monitor",
@@ -139,6 +143,7 @@ export const PROJECTS: Project[] = [
     textColor: "#ffffff",
     status: "completed",
     kind: "side-project",
+    xUrl: "https://x.com/tmkm44/status/2031846024575402322",
   },
   {
     id: "clawrace",

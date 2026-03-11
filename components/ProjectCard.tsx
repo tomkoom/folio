@@ -66,6 +66,21 @@ function CardFooter({
         >
           {status.label}
         </span>
+        {project.xUrl && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              window.open(project.xUrl, "_blank", "noopener,noreferrer");
+            }}
+            className="flex items-center gap-1 rounded-full bg-neutral-800/80 px-2.5 py-1 text-xs font-medium text-gray-400 transition-colors hover:bg-neutral-700/80 hover:text-white"
+            title="View on X"
+          >
+            <Icon lucideName="Twitter" className="h-3 w-3" />
+            <span>X</span>
+          </button>
+        )}
       </div>
       {isClickable && (
         <span className="flex items-center gap-1 text-sm font-semibold text-gray-400 transition-colors group-hover:text-white">
@@ -86,8 +101,7 @@ function MetadataCardContent({
   project: Project;
 }) {
   const title = metadata.title ?? project.name;
-  const description =
-    metadata.description ?? project.description;
+  const description = metadata.description ?? project.description;
   const hasImage = Boolean(metadata.image);
 
   return (
