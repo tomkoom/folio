@@ -82,15 +82,28 @@ export function groupProjectsByKind(
   return map;
 }
 
-export const PROJECTS: Project[] = [
+/** Ensures project tags are sorted alphabetically */
+function sortProjectTags(project: Project): Project {
+  return {
+    ...project,
+    tags: [...project.tags].sort((a, b) => a.localeCompare(b)),
+  };
+}
+
+/** Ensures all projects have sorted tags */
+function ensureSortedTags(projects: Project[]): Project[] {
+  return projects.map(sortProjectTags);
+}
+
+const PROJECTS_RAW: Project[] = [
   {
     id: "cyql-io",
     name: "cyql.io",
     description: "Internet Computer ecosystem directory.",
     website: "https://cyql.io",
     tags: [
-      "react",
       "motoko",
+      "react",
       "smart-contracts",
       "tailwindcss",
       "typescript",
@@ -110,11 +123,12 @@ export const PROJECTS: Project[] = [
       "Casino-grade jackpot game built as a Motoko smart contract on the Internet Computer. Implements casino-quality provably fair commit-reveal system for verifiable randomness, automated round lifecycle with timer-based draws, instant on-chain ICP payments with no intermediaries, and production-ready UX with seamless ticket purchasing and one-click prize claims.",
     website: "https://cyql.io/#/games/jackpot",
     tags: [
-      "motoko",
-      "smart-contracts",
-      "react",
-      "typescript",
       "game",
+      "motoko",
+      "react",
+      "smart-contracts",
+      "tailwindcss",
+      "typescript",
       "web-app",
     ],
     bgColor: "#000000",
@@ -133,13 +147,13 @@ export const PROJECTS: Project[] = [
     website: "https://cyql.io/#/games/flipduel",
     useMetadata: true,
     tags: [
-      "react",
+      "game",
       "motoko",
+      "react",
       "smart-contracts",
       "tailwindcss",
       "typescript",
       "web-app",
-      "game",
     ],
     bgColor: "#000000",
     textColor: "#ffffff",
@@ -154,7 +168,7 @@ export const PROJECTS: Project[] = [
     description:
       "Led frontend development for Royale.gg, a web-based case opening and battle platform. Architected and built interactive UI components, animated opening sequences, real-time game state management, and responsive layouts optimized for fast-paced gameplay. The platform enables users to open virtual mystery boxes and participate in competitive case battles with smooth, engaging user experiences.",
     website: "https://royale.gg/",
-    tags: ["react", "tailwindcss", "typescript", "web-app", "game"],
+    tags: ["game", "react", "tailwindcss", "typescript", "web-app"],
     bgColor: "#000000",
     textColor: "#ffffff",
     status: "completed",
@@ -169,13 +183,13 @@ export const PROJECTS: Project[] = [
     website: "https://t.me/+0TT9yYbgWzAzMmNi",
     useMetadata: true,
     tags: [
-      "nodejs",
-      "typescript",
-      "telegram-bot",
-      "grammy",
-      "trading-bot",
-      "crypto-trading",
       "automation",
+      "crypto-trading",
+      "grammy",
+      "nodejs",
+      "telegram-bot",
+      "trading-bot",
+      "typescript",
     ],
     bgColor: "#000000",
     textColor: "#ffffff",
@@ -190,16 +204,16 @@ export const PROJECTS: Project[] = [
       "Autonomous agents race to solve tasks. First correct submission wins the pool",
     website: "https://clawrace.xyz/",
     tags: [
+      "agents",
+      "ai",
+      "game",
+      "mongodb",
       "nextjs",
+      "openclaw",
       "tailwindcss",
       "typescript",
-      "web-app",
-      "mongodb",
       "vercel",
-      "game",
-      "ai",
-      "agents",
-      "openclaw",
+      "web-app",
     ],
     bgColor: "#000000",
     textColor: "#ffffff",
@@ -214,14 +228,14 @@ export const PROJECTS: Project[] = [
       "A web app delivering cryptographically provably fair, casino-grade games with fully verifiable results and trustless gameplay.",
     website: "https://g4mehub.xyz/",
     tags: [
+      "game",
+      "mongodb",
       "nextjs",
+      "solana",
       "tailwindcss",
       "typescript",
-      "web-app",
-      "mongodb",
       "vercel",
-      "solana",
-      "game",
+      "web-app",
     ],
     bgColor: "#000000",
     textColor: "#ffffff",
@@ -235,12 +249,12 @@ export const PROJECTS: Project[] = [
     description: "Instantly create live data badges.",
     website: "https://getbadge.io/",
     tags: [
+      "mongodb",
       "nextjs",
       "tailwindcss",
       "typescript",
-      "web-app",
-      "mongodb",
       "vercel",
+      "web-app",
     ],
     bgColor: "#000000",
     textColor: "#ffffff",
@@ -285,3 +299,5 @@ export const PROJECTS: Project[] = [
     kind: "personal",
   },
 ];
+
+export const PROJECTS: Project[] = ensureSortedTags(PROJECTS_RAW);
