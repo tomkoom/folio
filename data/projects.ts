@@ -16,6 +16,8 @@ export interface Project {
   kind: ProjectKind;
   /** X (Twitter) URL - can be profile or post */
   xUrl?: string;
+  /** Custom image URL - takes priority over metadata image */
+  image?: string;
 }
 
 export type ProjectIntent =
@@ -102,6 +104,28 @@ export const PROJECTS: Project[] = [
     xUrl: "https://x.com/cyqlio",
   },
   {
+    id: "jackpot",
+    name: "cyql.io: Jackpot",
+    description:
+      "Casino-grade jackpot game built as a Motoko smart contract on the Internet Computer. Implements casino-quality provably fair commit-reveal system for verifiable randomness, automated round lifecycle with timer-based draws, instant on-chain ICP payments with no intermediaries, and production-ready UX with seamless ticket purchasing and one-click prize claims.",
+    website: "https://cyql.io/#/games/jackpot",
+    tags: [
+      "motoko",
+      "smart-contracts",
+      "react",
+      "typescript",
+      "game",
+      "web-app",
+    ],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "completed",
+    useMetadata: true,
+    kind: "side-project",
+    xUrl: "https://x.com/cyqlio",
+    image: "https://cyql.io/assets/icp-jackpot-1-480-BQaO62fG.webp",
+  },
+  {
     id: "flipduel",
     name: "cyql.io: FlipDuel",
     description:
@@ -122,6 +146,20 @@ export const PROJECTS: Project[] = [
     status: "completed",
     kind: "side-project",
     xUrl: "https://x.com/cyqlio",
+    image: "https://cyql.io/assets/flipduel-1-480-KkQU2K2H.webp",
+  },
+  {
+    id: "royale",
+    name: "Royale",
+    description:
+      "Led frontend development for Royale.gg, a web-based case opening and battle platform. Architected and built interactive UI components, animated opening sequences, real-time game state management, and responsive layouts optimized for fast-paced gameplay. The platform enables users to open virtual mystery boxes and participate in competitive case battles with smooth, engaging user experiences.",
+    website: "https://royale.gg/",
+    tags: ["react", "tailwindcss", "typescript", "web-app", "game"],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "completed",
+    useMetadata: true,
+    kind: "commercial",
   },
   {
     id: "pump-monitor",
@@ -209,19 +247,6 @@ export const PROJECTS: Project[] = [
     status: "in-progress",
     useMetadata: true,
     kind: "side-project",
-  },
-  {
-    id: "royale",
-    name: "Royale",
-    description:
-      "Royale.gg is a web-based case opening and battle platform where users can open virtual mystery boxes and participate in real-time competitive case battles. The project includes interactive UI components, animated opening sequences, live game states, and responsive layouts designed for fast-paced user interaction. As a frontend collaboration, the work involved building and refining user-facing interfaces, implementing real-time updates, ensuring smooth gameplay flows, and contributing to the overall usability and performance of the platform within a modern web stack.",
-    website: "https://royale.gg/",
-    tags: ["react", "tailwindcss", "typescript", "web-app", "game"],
-    bgColor: "#000000",
-    textColor: "#ffffff",
-    status: "completed",
-    useMetadata: true,
-    kind: "commercial",
   },
   {
     id: "d4ys",

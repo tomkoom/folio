@@ -1,8 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/Icon";
-import type { Project, ProjectKind } from "@/data/projects";
-import { PROJECT_KIND_LABELS } from "@/data/projects";
+import type { Project } from "@/data/projects";
 import { useProjectMetadata } from "@/hooks/useProjectMetadata";
 import type { ScrapedMetadata } from "@/types/metadata";
 
@@ -21,21 +20,6 @@ const statusConfig = {
   },
 } as const;
 
-const kindConfig: Record<ProjectKind, { label: string; className: string }> = {
-  commercial: {
-    label: PROJECT_KIND_LABELS.commercial,
-    className: "bg-amber-500/10 text-amber-400",
-  },
-  "side-project": {
-    label: PROJECT_KIND_LABELS["side-project"],
-    className: "bg-violet-500/10 text-violet-400",
-  },
-  personal: {
-    label: PROJECT_KIND_LABELS.personal,
-    className: "bg-emerald-500/10 text-emerald-400",
-  },
-};
-
 interface ProjectCardProps {
   project: Project;
 }
@@ -50,22 +34,15 @@ function CardFooter({
   project: Project;
   isClickable: boolean;
 }) {
-  const status = statusConfig[project.status];
-  const kind = kindConfig[project.kind];
+  // const status = statusConfig[project.status];
   return (
     <div className="flex flex-wrap items-center justify-between gap-2 border-t border-neutral-800/60 px-4 py-3">
       <div className="flex flex-wrap items-center gap-2">
-        <span
-          className={`rounded-full px-2.5 py-1 text-xs font-medium ${kind.className}`}
-          title={`Project type: ${kind.label}`}
-        >
-          {kind.label}
-        </span>
-        <span
+        {/* <span
           className={`rounded-full px-2.5 py-1 text-xs font-semibold ${status.className}`}
         >
           {status.label}
-        </span>
+        </span> */}
         {project.xUrl && (
           <button
             type="button"
@@ -102,7 +79,9 @@ function MetadataCardContent({
 }) {
   const title = metadata.title ?? project.name;
   const description = metadata.description ?? project.description;
-  const hasImage = Boolean(metadata.image);
+  // Prioritize project.image over metadata.image
+  const imageUrl = project.image ?? metadata.image;
+  const hasImage = Boolean(imageUrl);
 
   return (
     <>
@@ -110,7 +89,7 @@ function MetadataCardContent({
         <div className="relative aspect-[2/1] w-full shrink-0 bg-neutral-900">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={metadata.image!}
+            src={imageUrl!}
             alt=""
             className="h-full w-full object-cover"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
@@ -158,13 +137,29 @@ function MetadataCardContent({
 
 /** Local card: name + description only (no OG image). */
 function LocalCardContent({ project }: { project: Project }) {
+  // If project has a custom image, show it even without metadata
+  const hasImage = Boolean(project.image);
+
   return (
-    <div className="flex flex-1 flex-col p-6">
-      <h2 className="text-xl font-bold text-white">{project.name}</h2>
-      <p className="mt-1.5 text-base leading-relaxed text-gray-400">
-        {project.description}
-      </p>
-    </div>
+    <>
+      {hasImage && (
+        <div className="relative aspect-[2/1] w-full shrink-0 bg-neutral-900">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={project.image!}
+            alt=""
+            className="h-full w-full object-cover"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+          />
+        </div>
+      )}
+      <div className="flex flex-1 flex-col p-6">
+        <h2 className="text-xl font-bold text-white">{project.name}</h2>
+        <p className="mt-1.5 text-base leading-relaxed text-gray-400">
+          {project.description}
+        </p>
+      </div>
+    </>
   );
 }
 
@@ -181,7 +176,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     shouldUseMetadata &&
     metadata != null &&
     !isError &&
-    (metadata.title != null || metadata.image != null);
+    (metadata.title != null || metadata.image != null || project.image != null);
 
   return (
     <li>
