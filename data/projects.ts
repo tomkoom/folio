@@ -97,6 +97,33 @@ function ensureSortedTags(projects: Project[]): Project[] {
 
 const PROJECTS_RAW: Project[] = [
   {
+    id: "polyterm",
+    name: "Polyterm",
+    description:
+      "Real-time trades & prices for Polymarket's fixed-timeframe Up/Down crypto markets. Streams live order book data and trade events via WebSockets through a Node.js backend connected to Polymarket's CLOB API, with a React + Vite frontend displaying price action and market depth as it happens.",
+    website: "https://polyterm.vercel.app/",
+    tags: [
+      "clob",
+      "crypto-trading",
+      "fullstack",
+      "nodejs",
+      "polymarket",
+      "react",
+      "realtime",
+      "trading",
+      "typescript",
+      "vercel",
+      "vite",
+      "web-app",
+      "websockets",
+    ],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "completed",
+    useMetadata: true,
+    kind: "side-project",
+  },
+  {
     id: "cyql-io",
     name: "cyql.io",
     description: "Internet Computer ecosystem directory.",

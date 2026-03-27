@@ -1,6 +1,6 @@
 import { Footer, Navigation } from "@/components/layout";
 import { QueryProvider } from "@/components/providers/QueryProvider";
-import { APP_DESCRIPTION, APP_NAME } from "@/constants";
+import { APP_DESCRIPTION, APP_NAME, AUTHOR_NAME, PROD_URL } from "@/constants";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
@@ -25,24 +25,46 @@ const backgroundStyle = {
 } as const;
 
 export const metadata: Metadata = {
+  metadataBase: new URL(PROD_URL),
   title: {
-    default: APP_NAME,
+    default: `${APP_NAME} — Folio`,
     template: `%s | ${APP_NAME}`,
   },
-  description: APP_DESCRIPTION || "Portfolio of tmkm - Full-stack developer open to collaboration and freelance work",
-  keywords: ["portfolio", "developer", "full-stack", "freelance", "collaboration"],
-  authors: [{ name: "tmkm44" }],
-  creator: "tmkm44",
+  description: APP_DESCRIPTION,
+  keywords: [
+    "tomkoom",
+    "portfolio",
+    "full-stack developer",
+    "web developer",
+    "freelance developer",
+    "blockchain developer",
+    "web3",
+    "react",
+    "typescript",
+    "next.js",
+    "node.js",
+    "side projects",
+    "crypto",
+    "trading tools",
+    "AI",
+    "open to work",
+  ],
+  authors: [{ name: AUTHOR_NAME, url: "https://github.com/tomkoom" }],
+  creator: AUTHOR_NAME,
+  robots: { index: true, follow: true },
   openGraph: {
     type: "website",
     locale: "en_US",
-    siteName: APP_NAME,
-    title: APP_NAME,
-    description: APP_DESCRIPTION || "Portfolio of tmkm - Full-stack developer open to collaboration and freelance work",
+    url: PROD_URL,
+    siteName: `${APP_NAME} — Folio`,
+    title: `${APP_NAME} — Folio`,
+    description: APP_DESCRIPTION,
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     creator: "@tmkm44",
+    title: `${APP_NAME} — Folio`,
+    description: APP_DESCRIPTION,
   },
   icons: {
     icon: "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠️</text></svg>",

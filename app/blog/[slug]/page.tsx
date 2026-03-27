@@ -19,9 +19,20 @@ export async function generateMetadata({
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post not found" };
+  const description = post.content.slice(0, 160).replace(/\n/g, " ").trim();
   return {
     title: post.title,
-    description: post.content.slice(0, 160).replace(/\n/g, " ").trim(),
+    description,
+    openGraph: {
+      title: post.title,
+      description,
+      type: "article",
+    },
+    twitter: {
+      card: "summary",
+      title: post.title,
+      description,
+    },
   };
 }
 
