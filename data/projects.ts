@@ -18,8 +18,6 @@ export interface Project {
   xUrl?: string;
   /** Custom image URL - takes priority over metadata image */
   image?: string;
-  /** When true, suppresses image display even if metadata or project.image provides one */
-  hideImage?: boolean;
 }
 
 export type ProjectIntent =
@@ -128,7 +126,6 @@ const PROJECTS_RAW: Project[] = [
     textColor: "#ffffff",
     status: "in-progress",
     useMetadata: true,
-    hideImage: true,
     kind: "side-project",
   },
   {

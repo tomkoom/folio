@@ -69,6 +69,20 @@ function CardFooter({
   );
 }
 
+function CardImage({ src }: { src: string }) {
+  return (
+    <div className="relative aspect-[2/1] w-full shrink-0 bg-neutral-900">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        alt=""
+        className="h-full w-full object-cover"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+      />
+    </div>
+  );
+}
+
 /** OG-style card: image, title, description (Twitter-like). */
 function MetadataCardContent({
   metadata,
@@ -79,23 +93,11 @@ function MetadataCardContent({
 }) {
   const title = metadata.title ?? project.name;
   const description = metadata.description ?? project.description;
-  // Prioritize project.image over metadata.image; suppress if hideImage is set
-  const imageUrl = project.hideImage ? undefined : (project.image ?? metadata.image);
-  const hasImage = Boolean(imageUrl);
+  const imageUrl = project.image ?? metadata.image;
 
   return (
     <>
-      {hasImage && (
-        <div className="relative aspect-[2/1] w-full shrink-0 bg-neutral-900">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={imageUrl!}
-            alt=""
-            className="h-full w-full object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-        </div>
-      )}
+      {imageUrl && <CardImage src={imageUrl} />}
       <div className="flex flex-1 flex-col p-4">
         {metadata.publisher && (
           <p className="mb-1 text-xs font-medium uppercase tracking-wide text-gray-500">
@@ -135,24 +137,11 @@ function MetadataCardContent({
   );
 }
 
-/** Local card: name + description only (no OG image). */
+/** Local card: name + description only (no OG metadata). */
 function LocalCardContent({ project }: { project: Project }) {
-  // If project has a custom image, show it even without metadata
-  const hasImage = Boolean(project.image);
-
   return (
     <>
-      {hasImage && (
-        <div className="relative aspect-[2/1] w-full shrink-0 bg-neutral-900">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={project.image!}
-            alt=""
-            className="h-full w-full object-cover"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          />
-        </div>
-      )}
+      {project.image && <CardImage src={project.image} />}
       <div className="flex flex-1 flex-col p-6">
         <h2 className="text-xl font-bold text-white">{project.name}</h2>
         <p className="mt-1.5 text-base leading-relaxed text-gray-400">
