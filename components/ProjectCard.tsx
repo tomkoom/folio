@@ -79,8 +79,8 @@ function MetadataCardContent({
 }) {
   const title = metadata.title ?? project.name;
   const description = metadata.description ?? project.description;
-  // Prioritize project.image over metadata.image
-  const imageUrl = project.image ?? metadata.image;
+  // Prioritize project.image over metadata.image; suppress if hideImage is set
+  const imageUrl = project.hideImage ? undefined : (project.image ?? metadata.image);
   const hasImage = Boolean(imageUrl);
 
   return (

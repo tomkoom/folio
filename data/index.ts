@@ -1,9 +1,9 @@
 export {
-  PROJECTS,
-  OPEN_CONTRIBUTIONS,
   groupProjectsByKind,
-  PROJECT_KIND_ORDER,
+  OPEN_CONTRIBUTIONS,
   PROJECT_KIND_LABELS,
+  PROJECT_KIND_ORDER,
+  PROJECTS,
   type Project,
   type ProjectKind,
 } from "./projects";

@@ -18,6 +18,8 @@ export interface Project {
   xUrl?: string;
   /** Custom image URL - takes priority over metadata image */
   image?: string;
+  /** When true, suppresses image display even if metadata or project.image provides one */
+  hideImage?: boolean;
 }
 
 export type ProjectIntent =
@@ -96,6 +98,31 @@ function ensureSortedTags(projects: Project[]): Project[] {
 }
 
 const PROJECTS_RAW: Project[] = [
+  {
+    id: "signalscout",
+    name: "SignalScout",
+    description:
+      "Real-time crypto pump & momentum signal scanner. Monitors crypto futures markets 24/7 and delivers instant alerts with price, volume, and chart data the moment momentum spikes occur.",
+    website: "https://signalscout.xyz/",
+    tags: [
+      "crypto-trading",
+      "exchanges-api",
+      "fullstack",
+      "nodejs",
+      "react",
+      "realtime",
+      "trading",
+      "typescript",
+      "vite",
+      "web-app",
+    ],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "in-progress",
+    useMetadata: true,
+    hideImage: true,
+    kind: "side-project",
+  },
   {
     id: "polyterm",
     name: "Polyterm",
