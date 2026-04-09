@@ -36,25 +36,25 @@ export type ProjectType =
 
 export const OPEN_CONTRIBUTIONS = [
   {
-    id: "folio (this site)",
+    id: "folio",
     github: "https://github.com/tomkoom/folio",
     appLink: "https://cr4ft.vercel.app/",
   },
   {
-    id: "coins-treemap",
+    id: "crypto-market-treemap",
     github: "https://github.com/tomkoom/coins-treemap-chart",
     appLink: "https://tomkoom.github.io/coins-treemap-chart/",
   },
   {
-    id: "matrix-bg",
+    id: "matrix-background",
     github: "https://github.com/tomkoom/matrix-bg",
     appLink: "https://tomkoom.github.io/matrix-bg/",
   },
-  {
-    id: "string-to-color",
-    github: "https://github.com/tomkoom/string-to-color",
-    appLink: "https://tomkoom.github.io/string-to-color/",
-  },
+  // {
+  //   id: "string-to-color",
+  //   github: "https://github.com/tomkoom/string-to-color",
+  //   appLink: "https://tomkoom.github.io/string-to-color/",
+  // },
 ];
 
 export const PROJECT_KIND_ORDER: ProjectKind[] = [
@@ -176,6 +176,19 @@ const PROJECTS_RAW: Project[] = [
     xUrl: "https://x.com/cyqlio",
   },
   {
+    id: "royale",
+    name: "Royale",
+    description:
+      "Led frontend development for Royale.gg, a web-based case opening and battle platform. Architected and built interactive UI components, animated opening sequences, real-time game state management, and responsive layouts optimized for fast-paced gameplay. The platform enables users to open virtual mystery boxes and participate in competitive case battles with smooth, engaging user experiences.",
+    website: "https://royale.gg/",
+    tags: ["game", "react", "tailwindcss", "typescript", "web-app"],
+    bgColor: "#000000",
+    textColor: "#ffffff",
+    status: "completed",
+    useMetadata: true,
+    kind: "commercial",
+  },
+  {
     id: "jackpot",
     name: "cyql.io: Jackpot",
     description:
@@ -198,42 +211,29 @@ const PROJECTS_RAW: Project[] = [
     xUrl: "https://x.com/cyqlio",
     image: "https://cyql.io/assets/icp-jackpot-1-480-BQaO62fG.webp",
   },
-  {
-    id: "flipduel",
-    name: "cyql.io: FlipDuel",
-    description:
-      "Fully functional 1v1 coin-flip game implemented as a smart contract written in Motoko, the native programming language for canisters (smart contracts) on the Internet Computer blockchain. Players can create a duel or match an existing one — the winner receives 2× the total stake. The game is deployed directly on an Internet Computer canister and uses the ICP randomness library and tooling to generate provably fair random outcomes. All payments are processed instantly in ICP on-chain.",
-    website: "https://cyql.io/#/games/flipduel",
-    useMetadata: true,
-    tags: [
-      "game",
-      "motoko",
-      "react",
-      "smart-contracts",
-      "tailwindcss",
-      "typescript",
-      "web-app",
-    ],
-    bgColor: "#000000",
-    textColor: "#ffffff",
-    status: "completed",
-    kind: "side-project",
-    xUrl: "https://x.com/cyqlio",
-    image: "https://cyql.io/assets/flipduel-1-480-KkQU2K2H.webp",
-  },
-  {
-    id: "royale",
-    name: "Royale",
-    description:
-      "Led frontend development for Royale.gg, a web-based case opening and battle platform. Architected and built interactive UI components, animated opening sequences, real-time game state management, and responsive layouts optimized for fast-paced gameplay. The platform enables users to open virtual mystery boxes and participate in competitive case battles with smooth, engaging user experiences.",
-    website: "https://royale.gg/",
-    tags: ["game", "react", "tailwindcss", "typescript", "web-app"],
-    bgColor: "#000000",
-    textColor: "#ffffff",
-    status: "completed",
-    useMetadata: true,
-    kind: "commercial",
-  },
+  // {
+  //   id: "flipduel",
+  //   name: "cyql.io: FlipDuel",
+  //   description:
+  //     "Fully functional 1v1 coin-flip game implemented as a smart contract written in Motoko, the native programming language for canisters (smart contracts) on the Internet Computer blockchain. Players can create a duel or match an existing one — the winner receives 2× the total stake. The game is deployed directly on an Internet Computer canister and uses the ICP randomness library and tooling to generate provably fair random outcomes. All payments are processed instantly in ICP on-chain.",
+  //   website: "https://cyql.io/#/games/flipduel",
+  //   useMetadata: true,
+  //   tags: [
+  //     "game",
+  //     "motoko",
+  //     "react",
+  //     "smart-contracts",
+  //     "tailwindcss",
+  //     "typescript",
+  //     "web-app",
+  //   ],
+  //   bgColor: "#000000",
+  //   textColor: "#ffffff",
+  //   status: "completed",
+  //   kind: "side-project",
+  //   xUrl: "https://x.com/cyqlio",
+  //   image: "https://cyql.io/assets/flipduel-1-480-KkQU2K2H.webp",
+  // },
   {
     id: "pump-monitor",
     name: "Pump Monitor",
@@ -321,18 +321,18 @@ const PROJECTS_RAW: Project[] = [
     useMetadata: true,
     kind: "side-project",
   },
-  {
-    id: "d4ys",
-    name: "d4ys",
-    description: "A lightweight countdown tracker for events.",
-    website: "https://d4ys.vercel.app",
-    tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
-    bgColor: "#000000",
-    textColor: "#ffffff",
-    status: "in-progress",
-    useMetadata: true,
-    kind: "personal",
-  },
+  // {
+  //   id: "d4ys",
+  //   name: "d4ys",
+  //   description: "A lightweight countdown tracker for events.",
+  //   website: "https://d4ys.vercel.app",
+  //   tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
+  //   bgColor: "#000000",
+  //   textColor: "#ffffff",
+  //   status: "in-progress",
+  //   useMetadata: true,
+  //   kind: "personal",
+  // },
   {
     id: "mesh-gradient-wallpapers",
     name: "Mesh Gradient Wallpapers",
@@ -345,18 +345,18 @@ const PROJECTS_RAW: Project[] = [
     useMetadata: false,
     kind: "personal",
   },
-  {
-    id: "cover-generator",
-    name: "Cover Generator",
-    description: "A cover generator.",
-    website: "#",
-    tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
-    bgColor: "#000000",
-    textColor: "#ffffff",
-    status: "in-progress",
-    useMetadata: false,
-    kind: "personal",
-  },
+  // {
+  //   id: "cover-generator",
+  //   name: "Cover Generator",
+  //   description: "A cover generator.",
+  //   website: "#",
+  //   tags: ["nextjs", "tailwindcss", "typescript", "web-app"],
+  //   bgColor: "#000000",
+  //   textColor: "#ffffff",
+  //   status: "in-progress",
+  //   useMetadata: false,
+  //   kind: "personal",
+  // },
 ];
 
 export const PROJECTS: Project[] = ensureSortedTags(PROJECTS_RAW);
